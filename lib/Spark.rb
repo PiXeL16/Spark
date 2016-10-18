@@ -1,46 +1,59 @@
 require "Spark/version"
+require 'colored'
+require 'logger'
 
 module Spark
   # Spark logger functionality
   class Spark
-    class << self
-      def log
-        $stdout.sync = true
-        @log ||= Logger.new($stdout)
+    # returns the medium on where to print the error
+    attr_reader :out
+    attr_reader :verbose
 
-        @log.formatter = proc do |severity, datetime, progname, msg|
-          if $verbose
-            string = "#{severity} [#{datetime.strftime('%Y-%m-%d %H:%M:%S.%2N')}]: "
-          else
-            string = "[#{datetime.strftime('%H:%M:%S')}]: "
-          end
+    def initialize(out: $stdout, verbose: false)
+      @out = out
+      @verbose = verbose
+    end
 
-          string += "#{msg}\n"
+    def log
+      out.sync = true
+      @log ||= Logger.new(out)
 
-          string
+      @log.formatter = proc do |severity, datetime, progname, msg|
+        if verbose
+          string = "#{severity} [#{datetime.strftime('%Y-%m-%d %H:%M:%S.%2N')}]: "
+        else
+          string = "[#{datetime.strftime('%H:%M:%S')}]: "
         end
-        @log
-      end
 
-      def error(message)
-        log.error(message.to_s.red)
-      end
+        string += "#{msg}\n"
 
-      def important(message)
-        log.warn(message.to_s.yellow)
+        string
       end
+      @log
+    end
 
-      def success(message)
-        log.info(message.to_s.green)
-      end
+    def error(message)
+      log.error(message.to_s.red)
+    end
 
-      def info(message)
-        log.info(message.to_s.blue)
-      end
+    def important(message)
+      log.warn(message.to_s.purple)
+    end
 
-      def message(message)
-        log.info(message.to_s)
-      end
+    def warning(message)
+      log.warn(message.to_s.yellow)
+    end
+
+    def success(message)
+      log.info(message.to_s.green)
+    end
+
+    def info(message)
+      log.info(message.to_s.blue)
+    end
+
+    def message(message)
+      log.info(message.to_s)
     end
   end
 end
