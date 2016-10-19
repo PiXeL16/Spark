@@ -1,37 +1,55 @@
-# Spark [![Build Status](https://travis-ci.org/PiXeL16/Spark.svg?branch=master)](https://travis-ci.org/PiXeL16/Spark) [![codecov](https://codecov.io/gh/PiXeL16/Spark/branch/master/graph/badge.svg)](https://codecov.io/gh/PiXeL16/Spark)
+# Spark [![Gem Version](https://badge.fury.io/rb/spark_cli.svg)](https://badge.fury.io/rb/spark_cli) [![Build Status](https://travis-ci.org/PiXeL16/Spark.svg?branch=master)](https://travis-ci.org/PiXeL16/Spark) [![codecov](https://codecov.io/gh/PiXeL16/Spark/branch/master/graph/badge.svg)](https://codecov.io/gh/PiXeL16/Spark)
 
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Spark`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Spark is an easy to use CLI logger module that logs in color. :tada
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'Spark'
+gem 'spark_cli'
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
-    $ gem install Spark
+    $ gem install spark_cli
 
 ## Usage
 
-TODO: Write usage instructions here
+Usage is very simple.
+```ruby
+require 'Spark'
+spark = Spark::Fire.new
+spark.info('This is an info message')
+```
+There are several log types to use
+```ruby
+@@spark.info('This is an Info message')
+@@spark.error('This is an Error message')
+@@spark.important('This is an important message')
+@@spark.message('This is a regular message')
+@@spark.warning('This is a warning message')
+@@spark.success('Yayyy it worked')
+```
+That code will result in
+
+![Spark screenshot](/web/spark_shot.png)
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/Spark.
+Bug reports and pull requests are welcome at https://github.com/PiXel16/Spark.
+
+## Author
+Chris Jimenez - http://code.chrisjimenez.net, [@chrisjimeneznat](http://twitter.com/chrisjimeneznat)
+
 
