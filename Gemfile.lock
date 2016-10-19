@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    spark_cli (0.1.0)
+    spark_cli (0.1.2)
       colored (~> 1.2)
 
 GEM
