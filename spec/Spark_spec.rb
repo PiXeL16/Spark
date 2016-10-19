@@ -26,5 +26,30 @@ module Spark
       @spark.error('This is an error')
       expect(@output.string).to include('This is an error')
     end
+
+    it 'show info message' do
+      @spark.info('This is an info message')
+      expect(@output.string).to include('This is an info message')
+    end
+
+    it 'show success message' do
+      @spark.success('This is an success message')
+      expect(@output.string).to include('This is an success message')
+    end
+
+    it 'show important message' do
+      @spark.important('This is an important message')
+      expect(@output.string).to include('THIS IS AN IMPORTANT MESSAGE')
+    end
+
+    it 'shows regular message' do
+      @spark.message('This is just a message')
+      expect(@output.string).to include('This is just a message')
+    end
+
+    it 'shows a warning message' do
+      @spark.warning('This is a warning message')
+      expect(@output.string).to include('This is a warning message')
+    end
   end
 end

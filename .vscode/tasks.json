@@ -1,0 +1,11 @@
+{
+  "command": "bundle",
+  "args": ["exec"],
+  "tasks": [
+    {
+      "suppressTaskName": true,
+      "taskName": "test",
+      "args": [ "rspec"]
+    }
+  ]
+}

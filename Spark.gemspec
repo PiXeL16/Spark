@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Chris Jimenez"]
   spec.email         = ["cjimenez16@gmail.com"]
 
-  spec.summary       = "Easy to use CLI logger module"
-  spec.description   = "Spark is a easy to use CLI logger module that logs with color."
+  spec.summary       = "An Easy to use CLI logger module"
+  spec.description   = "Spark is an easy to use CLI logger module that logs in color."
   spec.homepage      = "https://github.com/PiXeL16/Spark"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -34,4 +34,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "simplecov"
 end
