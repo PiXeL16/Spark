@@ -1,4 +1,5 @@
-# Spark
+# Spark [![Build Status](https://travis-ci.org/PiXeL16/Spark.svg?branch=master)](https://travis-ci.org/PiXeL16/Spark) [![codecov](https://codecov.io/gh/PiXeL16/Spark/branch/master/graph/badge.svg)](https://codecov.io/gh/PiXeL16/Spark)
+
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Spark`. To experiment with that code, run `bin/console` for an interactive prompt.
 
