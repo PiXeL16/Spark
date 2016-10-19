@@ -1,7 +1,7 @@
 ![Spark banner](/web/spark_banner.png)
 # Spark [![Gem Version](https://badge.fury.io/rb/spark_cli.svg)](https://badge.fury.io/rb/spark_cli) [![Build Status](https://travis-ci.org/PiXeL16/Spark.svg?branch=master)](https://travis-ci.org/PiXeL16/Spark) [![codecov](https://codecov.io/gh/PiXeL16/Spark/branch/master/graph/badge.svg)](https://codecov.io/gh/PiXeL16/Spark)
 
-Spark is an easy to use CLI logger module that logs in color. :tada
+Spark is an easy to use CLI logger module that logs in color. 🎉
 
 ## Installation
 
